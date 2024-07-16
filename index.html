@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-image: url(clove.png);
+            background-size: cover;
+            animation: stars 10s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .butterfly {
+            font-size: 3rem; /* Larger size */
+            cursor: pointer;
+            animation: fly 3s infinite alternate;
+        }
+        .hidden-message {
+            display: none;
+            font-size: 1.5rem;
+            color: #ff69b4; /* Change color to match Valorant's clove color */
+            animation: colorChange 3s infinite alternate;
+        }
+        @keyframes stars {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes fly {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        @keyframes colorChange {
+            0% {
+                color: #ff69b4;
+            }
+            100% {
+                color: #00ff00; /* Change to desired color */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="butterfly" onclick="showMessage()">🦋</div>
+    <div class="hidden-message" id="birthdayMessage">
+      Happy Birthday! 🦋✨Just like the enchanting butterflies you bring into our games, you add a special magic to every match. Playing as Omen alongside you has been the most amazing adventure. You're the best duo I could ever ask for, and every moment we spend jumping into battles together is a treasure. 💖When you're mad or sad, I always try to be there for you, standing behind you, whispering apologies and hoping to see your smile again. 😊 I cherish our time together and can't imagine a better partner.I hope your birthday is as beautiful and extraordinary as you are. 🎂🌟 Here's to many more games, victories, and memories together.
+    </div>
+    <script>
+        function showMessage() {
+            const message = document.getElementById('birthdayMessage');
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
